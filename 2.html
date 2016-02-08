@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Introduction to programming</title>
+  </head>
+
+  <body>
+    <h1 id="step">Programming is</h1>
+    <ul>
+     <li> <button onclick=demoVariables()>      variables     </button> </li>
+     <li> <button onclick=demoFlowControl()>    flow control  </button> </li>
+    </ul>
+
+    <script>
+      function demoVariables() {
+        var x = 5;
+        var y = 8;
+        window.alert(x * y);
+      }
+      function demoFlowControl() {
+        var x = 1;
+        while (x < 32) {
+          window.alert(x);
+          x = x * 2;
+        }
+      }
+    </script>
+  </body>
+</html>

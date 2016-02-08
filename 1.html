@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Introduction to programming</title>
+  </head>
+
+  <body>
+    <h1 id="step">Step 1</h1>
+    <p  id="desc">Learn the difference between HTML and Javascript</p>
+    <button id="pme"
+            onclick="update('step', 'Step 2'); 
+                     update('desc','HTML: formatting <br> Javascript: <a href=2.html>programming</a>');
+                     hide('pme');">
+      Push me
+    </button>
+
+    <script>
+      function update(id,text) {
+        document.getElementById(id).innerHTML = text;
+      }
+      function hide(id) {
+        document.getElementById(id).style.visibility='hidden';
+      }
+    </script>
+  </body>
+</html>

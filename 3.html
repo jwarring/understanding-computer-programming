@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Introduction to programming</title>
+  </head>
+
+  <body>
+    <h1 id="step">Programming is</h1>
+    <ul>
+     <li> <button onclick=demoQueryVariables()> data structures          </button> </li>
+     <li> <button onclick=demoFlowControl()>    mapping input to output  </button> </li>
+    </ul>
+
+    <script>
+      function getQueryVariable(variable)
+      {
+       var query = window.location.search.substring(1);
+       var vars  = query.split("&");
+
+       for (var i=0; i<vars.length; i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+       }
+
+       return(false);
+      }
+      function demoQueryVariables() {
+        var x = getQueryVariable(x);
+        var y = getQueryVariable(y);
+        window.alert(x * y);
+      }
+    </script>
+  </body>
+</html>
