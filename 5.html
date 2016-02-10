@@ -1,0 +1,23 @@
+<body>
+<canvas id="myCanvas" width="400" height="400" style="solid #000000;">
+</canvas>
+<script>
+ var drawRectangle = function(ctx,a,b,c,d) {
+   ctx.moveTo(a,b);
+   ctx.lineTo(a,a+c);
+   ctx.stroke();
+   ctx.lineTo(a+d,b+c);
+   ctx.stroke();
+   ctx.lineTo(a+d,b);
+   ctx.stroke();
+   ctx.lineTo(a,b);
+   ctx.stroke();
+ }
+ var c = document.getElementById("myCanvas");
+ var ctx = c.getContext("2d");
+
+ drawRectangle(ctx, 20, 20, 80, 180);
+ ctx.strokeStele="#FFFF00";
+ ctx.strokeRect(20,120,80,180);
+</script>
+</body>
